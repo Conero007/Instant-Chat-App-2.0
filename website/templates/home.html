@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block head %}
+<title>Chat App</title>
+{% endblock %}
+
+{% block body %}
+<h3>Lobby</h3><br><br>
+
+<form action="{{ url_for('views.chat') }}">
+    <div>
+        <label for="">Enter Username:</label>
+        <input type="text" name="username">
+    </div>
+
+    <div>
+        <input type="radio" id="global" name="roomname" value="global">
+        <label for="global">Global</label><br>
+        <input type="radio" id="help" name="roomname" value="help">
+        <label for="help">Help</label>
+    </div>
+
+    <button type="submit">SUBMIT</button>
+</form>
+{% endblock %}
